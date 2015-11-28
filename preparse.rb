@@ -13,10 +13,6 @@ settings = {
     password: database_uri.password,
     database: database_uri.path.sub(%r{^/}, '')
   },
-  defaultPadText: '',
-  editOnly: true,
-  requireSession: true,
-  title: '',
 }.merge(JSON.parse(File.read(ENV.fetch('ETHERPAD_SETTINGS'))))
 
 # Write the settings hash out as JSON.
