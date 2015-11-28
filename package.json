@@ -17,7 +17,8 @@
     "heroku",
     "etherpad"
   ],
-  "author": "trevor-alexander,wuxxin",
+  "author": "trevor-alexander",
+  "contributors": [{"name": "wuxxin"}],
   "license": "GPL",
   "bugs": {
     "url": "https://github.com/wuxxin/etherpad-lite/issues"
@@ -31,8 +32,6 @@
 		"glob": "^4.0.2",
     "fstream": "^1.0.0",
     "tar": "^1.0.0",
-		"semver": "^2.3.0",
-		"graceful-fs": "^3.0.0",
 		"npm-cache-filename": "^1.0.0",
 		"ini": "^1.2.0",
 		"osenv": "^0.1.0",
