@@ -15,6 +15,10 @@ settings = {
   },
 }.merge(JSON.parse(File.read(ENV.fetch('ETHERPAD_SETTINGS'))))
 
+if ENV['ADDITIONAL_SETTINGS']
+  settings = settings.merge(JSON.parse(File.read(ENV.fetch('ADDITIONAL_SETTINGS'))))
+end
+
 # Write the settings hash out as JSON.
 File.open('./etherpad-lite/settings.json', 'w') { |f| f.write(settings.to_json) }
 
