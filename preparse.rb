@@ -10,6 +10,7 @@ settings = {
   dbSettings: {
     user: database_uri.user,
     host: database_uri.host,
+    port: database_uri.port,
     password: database_uri.password,
     database: database_uri.path.sub(%r{^/}, '')
   },
