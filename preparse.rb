@@ -12,7 +12,8 @@ settings = {
     host: database_uri.host,
     port: database_uri.port,
     password: database_uri.password,
-    database: database_uri.path.sub(%r{^/}, '')
+    database: database_uri.path.sub(%r{^/}, ''),
+    dbname: database_uri.path.sub(%r{^/}, '')
   },
   defaultPadText: '',
   editOnly: true,
