@@ -17,6 +17,12 @@ heroku config:add ETHERPAD_SETTINGS=settingsJSONinroot.json
 5. Add your Heroku app as a remote
 6. `git push heroku master`
 
+## plugin support
+
+Just add the plugin to package.json as a dependency.
+
+preparse.rb will copy all ep-starting packages to the etherpad plugins. Using the admin/plugins UI
+adds the plugin but it will reset in dyno restart
 
 ## additional settings
 
