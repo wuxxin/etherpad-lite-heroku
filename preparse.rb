@@ -24,6 +24,14 @@ settings = {
 # Write the settings hash out as JSON.
 File.open('./etherpad-lite/settings.json', 'w') { |f| f.write(settings.to_json) }
 
+# Heroku uses an ephemeral file system. If etherpad generates the APIKey.txt by itself when it first runs, you cannot read the contents of the APIKey.txt file generated.
+# Therefore, pass in your own ETHERPAD_API_KEY via the Heroku environment, so etherpad will use your key instead
+# For more info, read http://etherpad.org/doc/v1.5.7/#index_authentication and source code node/handler/APIHandler.js
+etherpad_api_key = ENV['ETHERPAD_API_KEY'];
+unless etherpad_api_key.nil?
+  File.open('./etherpad-lite/APIKEY.txt', 'w') { |f| f.write( etherpad_api_key ) } 
+end
+
 `./installPackages.sh`
 
 if ENV['ETHERPAD_ALLOW_ROOT'] == '1'

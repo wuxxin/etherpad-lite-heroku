@@ -33,6 +33,12 @@ root, set an additional config variable:
 heroku config:add ETHERPAD_ALLOW_ROOT=1
 ```
 
+To enable Etherpad's authentication features, set "requireSession" and "editOnly"
+to "true" in settings.conf. Also set your own API key : 
+
+```bash
+heroku config:add ETHERPAD_API_KEY=somereallylongrandomstring
+```
 
 ## TODO
 
