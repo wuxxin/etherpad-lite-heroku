@@ -1,7 +1,7 @@
 {
   "name": "herokupad",
-  "version": "1.5.7",
-  "description": "Herokuish Etherpad Lite 1.5.7",
+  "version": "1.6.0",
+  "description": "Herokuish Etherpad Lite 1.6.0",
   "main": "web.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
